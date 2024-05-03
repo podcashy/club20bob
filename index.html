@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN IN TO UPLOAD CONTENT</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: red;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        h3 {
+            font-size: 1.2em;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        marquee {
+            width: 100%;
+            padding: 10px 0;
+            background-color: green;
+            color: white;
+            font-size: 12px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        /* Added styles for specific elements */
+        h1 {
+            color: red;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <marquee direction="scroll">Login to upload your content now! Make the best out of your passion and creativity!!.</marquee>
+
+    <img src="https://i.imgur.com/mwpTHJj.png" alt="Grade 6 Icon" width="100" height="100">
+
+    <h1>SIGN IN TO UPLOAD CONTENT</h1>
+    <h3>Enter Your <strong>Name</strong> & The <strong>Password</strong> You Received. If You Are Not A Member <a href="https://sites.google.com/view/cbcdigitalapp/download-app" target="_blank">Sign Up Now</a> To Get Access!</h3>
+
+    <form name="myForm" onsubmit="return validateForm()">
+        <p><strong>Name:</strong> <input name="name" type="text" required /></p>
+        <p><strong>Password:</strong> <input name="password" type="password" required /></p>
+        <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["name"].value;
+            var password = document.forms["myForm"]["password"].value;
+            if (name == "" || password == "") {
+                alert("Name and password must be filled out");
+                return false;
+            }
+            if (password != "23406636") {
+                alert("Incorrect password");
+                return false;
+            }
+            window.location.href = "https://sites.google.com/view/forgrade-6/home";
+            return false;
+        }
+    </script>
+
+    <marquee direction="scroll">Welcome to Club 20 Bob! You will be redirected to upload your content. Any question? Call 0715399449 for assistance. Thank You!</marquee>
+</body>
+</html>
